@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "A boilerplate to chrome extension with webpack",
   "scripts": {
-    "build": "node utils/build.js",
+    "build": "webpack --mode production --module-bind 'js=babel-loader'",
     "start": "node utils/webserver.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
@@ -16,6 +19,7 @@
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.0",
     "webpack": "4.19.1",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
     "write-file-webpack-plugin": "^4.4.0"
   }
